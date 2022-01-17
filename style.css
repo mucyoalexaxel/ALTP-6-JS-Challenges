@@ -1,5 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.main-content{
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+#basicChallenges, #arrayAndObjectsChallenges, #sortingChallenges, #timeComplexityChallenges{
+    width: 75%;
+    text-align: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #000;
+}
+#basicChallenges h3, #arrayAndObjectsChallenges h3, #sortingChallenges h3, #timeComplexityChallenges h3{
+    font-size: 30px;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+#basicChallenges p, #arrayAndObjectsChallenges p, #sortingChallenges p, #timeComplexityChallenges p{
+    font-size: 16px;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+#basicChallenges p span, #arrayAndObjectsChallenges p span, #sortingChallenges p span, #timeComplexityChallenges p span{
+    font-weight: 400;
+    color: green;
+    cursor: pointer;
+}
+#basicChallenges p span:hover, #arrayAndObjectsChallenges p span:hover, #sortingChallenges p span:hover, #timeComplexityChallenges p span:hover{
+    color: rgb(255, 102, 0);
+    transition: color .4s ease;
 }
