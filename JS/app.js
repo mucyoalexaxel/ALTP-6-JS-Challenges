@@ -1,10 +1,34 @@
 
 // Basic Challenge
 
+// Prime Numbers Challenge
+
+var primeChallenge = document.getElementById("primeNumberChallenge");
+primeChallenge.addEventListener('click',checkPrime);
+
+function checkPrime(){
+        function isPrime(num){
+            if (num === 0 || num === 1) return false;
+            else if (num === 2) return true;
+            else {
+                for(let i = 2; i < num; i++){
+                    if(num % i === 0) return false;
+                }
+            }
+            return true;
+        }
+        function filterPrimeArray(primeArray){
+            return alert(primeArray.filter(i => isPrime(i)));
+        }
+        filterPrimeArray([10,2,5,11,19,20,30,1]);
+}
+
+
+
 // Palidrome Challenge
 
-var a = document.getElementById("palindromeChallenge");
-a.addEventListener('click',palidromeChecking);
+var paliChallenge = document.getElementById("palindromeChallenge");
+paliChallenge.addEventListener('click',palidromeChecking);
 function palidromeChecking(){
     function checkPalindrome(word) {
 
