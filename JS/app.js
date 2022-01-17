@@ -18,9 +18,14 @@ function checkPrime(){
             return true;
         }
         function filterPrimeArray(primeArray){
-            return alert(primeArray.filter(i => isPrime(i)));
+            return alert("The Prime Numbers Are: "+ primeArray.filter(i => isPrime(i)));
         }
-        filterPrimeArray([10,2,5,11,19,20,30,1]);
+        let newArr = [];
+        for( let n = 0; n < 5; n++){
+            const inputArr = parseInt(prompt("Enter 5 Numbers: "), 10);
+            newArr.push(inputArr);
+        }
+        filterPrimeArray(newArr);
 }
 
 
@@ -47,3 +52,5 @@ function palidromeChecking(){
     const value = checkPalindrome(string);
     alert(value);
 }
+
+
