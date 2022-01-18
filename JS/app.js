@@ -100,5 +100,49 @@ var inplaceArrayReversing = document.getElementById("inPlaceArrayReversingChalle
 inplaceArrayReversing.addEventListener('click',inplaceReverseArray);
 
 function inplaceReverseArray(){
-       alert("I am The Inplace Array Reversing Challenge");
+    let newArr = []
+    let arr = []
+    const reverse = (arr) => {
+        for(let i = arr.length-1; i >=0 ; i--){
+            newArr.push(arr[i])
+        }
+        return newArr
+    };
+    for(let n = 0; n < 10; n++){
+        const arrInput = parseInt(prompt("Enter 10 Numbers: "), 10)
+        arr.push(arrInput)
+    }
+       alert("The Reversed Array Is: " +"\r\n" +reverse(arr))
+}
+
+
+// Sorting Challenges
+
+// Custom Sorting Challenge
+var customSorting = document.getElementById("customSortingChallenge")
+customSorting.addEventListener('click',customSort)
+
+function customSort(){
+        let input = [];
+        for(let n = 0; n<10; n++){
+            const a = parseInt(prompt("Enter 10 Numbers: "), 10)
+            input.push(a)
+        }    
+        const sortMe = (array)  => {
+            let doneSorting = false;
+            while (!doneSorting) {
+            doneSorting = true;
+            for (let i = 1; i < array.length; i++){
+                if (array[i - 1] > array[i]) {
+                doneSorting = false;
+                let temp = array[i - 1];
+                array[i - 1] = array[i];
+                array[i] = temp;
+                }
+            }
+            }
+        
+            return array;
+        };
+      alert(sortMe(input));
 }
