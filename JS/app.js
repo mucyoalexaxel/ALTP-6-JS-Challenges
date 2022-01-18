@@ -123,17 +123,19 @@ var customSorting = document.getElementById("customSortingChallenge")
 customSorting.addEventListener('click',customSort)
 
 function customSort(){
+    // Array Input
         let input = [];
         for(let n = 0; n<10; n++){
             const a = parseInt(prompt("Enter 10 Numbers: "), 10)
             input.push(a)
         }    
+        // Sorting Array 
         const sortMe = (array)  => {
             let doneSorting = false;
             while (!doneSorting) {
             doneSorting = true;
             for (let i = 1; i < array.length; i++){
-                if (array[i - 1] > array[i]) {
+                if (array[i - 1] < array[i]) {
                 doneSorting = false;
                 let temp = array[i - 1];
                 array[i - 1] = array[i];
@@ -144,5 +146,6 @@ function customSort(){
         
             return array;
         };
-      alert(sortMe(input));
+        // Check Prime After Sorting
+        alert(sortMe(input));
 }
