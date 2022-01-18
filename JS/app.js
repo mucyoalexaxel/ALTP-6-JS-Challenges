@@ -87,7 +87,12 @@ var arrayReversing = document.getElementById("arrayReversingChallenge");
 arrayReversing.addEventListener('click',reverseArray);
 
 function reverseArray(){
-       alert("I am The Array Reversing Challenge");
+    let newArr = [];
+    for(let i = 0; i < 5; i++){
+        const a = parseInt(prompt("Enter A Numbers: "), 10);
+        newArr.push(a);
+    }
+       alert("The Entered Numbers Are: "+ newArr +"\r\n"+ "The Reversed Array Is: " + newArr.reverse());
 }
 
 // Inplace Array Reversing Challenge
