@@ -54,6 +54,10 @@ function palidromeChecking(){
 }
 
 
+
+
+
+
 // Array & Objects Challenge
 
 // Prime Number Challenge
@@ -138,6 +142,10 @@ function formatArray(){
     console.log(testObj(arr));
 
 }
+
+
+
+
 
 
 // Sorting Challenges
