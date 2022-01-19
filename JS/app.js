@@ -115,6 +115,30 @@ function inplaceReverseArray(){
        alert("The Reversed Array Is: " +"\r\n" +reverse(arr))
 }
 
+// Formatted Array Challenge
+var formattedArray = document.getElementById("formattedArrayChallenge");
+formattedArray.addEventListener('click',formatArray);
+
+function formatArray(){
+
+    const arr = ["Patrick wyne, 30", "lil wyne, 32","Eric mimi, 21","Dodos deck, 21","Alian Dwine, 22","Patrick wyne, 33","Patrick wyne, 100","Patrick wyne, 40"]
+    let list = [];
+    let person ={};
+    let testObj = arr =>{
+    for(let i = 0; i < arr.length; i++) {
+            list.push(arr[i].split(","));
+            person[list[i][0].split(" ").slice(0,1)] = {
+            secondName: list[i][0].split(" ").slice(1).join(),
+            age: list[i][1]
+        }
+    }
+    return person;
+}
+    alert("Inspect & Check The Console To See The Result")
+    console.log(testObj(arr));
+
+}
+
 
 // Sorting Challenges
 
